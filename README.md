@@ -5,10 +5,10 @@ This repository provides source code and pretrained model of COPLE-Net for COVID
 [A Noise-robust Framework for Automatic Segmentation of COVID-19 Pneumonia Lesions from CT Images.][tmi2020] IEEE Transactions on Medical Imaging. 2020. DOI: [10.1109/TMI.2020.3000314][tmi2020]
 
 ![coplenet_result](./pictures/coplenet_result.png)
-A segmentation example. (a), one slice of a CT volume. (b) segmentation by COPLE-Net (green) compared with ground truth (orange). (c) 3D visualization.
+A segmentation example. (a) one slice of a CT volume. (b) segmentation by COPLE-Net (green) compared with the ground truth (orange). (c) 3D visualization.
 
 ![coplenet_structure](./pictures/coplenet_structure.png)
-The structure of COPLE-Net. 
+The structure of COPLE-Net. It employes a concatenation of max-pooling and average pooling to reduce information loss during down-sampling, and uses bridge layers to alleviate the semantic gap between features from the encoder and the decoder. ASPP block is used at the bottleneck to better deal with lesions at multiple scales.
 
 # Requirements
 * [Pytorch][torch_link] version >=1.0.1.
