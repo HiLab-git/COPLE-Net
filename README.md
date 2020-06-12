@@ -4,10 +4,10 @@ This repository provides source code and pretrained model of COPLE-Net for COVID
 * [1] G. Wang, X. Liu, C. Li, Z. Xu, J. Ruan, H. Zhu, T. Meng, K. Li, N. Huang, S. Zhang. 
 [A Noise-robust Framework for Automatic Segmentation of COVID-19 Pneumonia Lesions from CT Images.][tmi2020] IEEE Transactions on Medical Imaging. 2020. DOI: [10.1109/TMI.2020.3000314][tmi2020]
 
-![coplenet_result](./picture/coplenet_result.png)
+![coplenet_result](./pictures/coplenet_result.png)
 A segmentation example. (a), one slice of a CT volume. (b) segmentation by COPLE-Net (green) compared with ground truth (orange). (c) 3D visualization.
 
-![coplenet_structure](./picture/coplenet_structure.png)
+![coplenet_structure](./pictures/coplenet_structure.png)
 The structure of COPLE-Net. 
 
 # Requirements
