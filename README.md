@@ -10,11 +10,15 @@ A segmentation example. (a) one slice of a CT volume. (b) segmentation by COPLE-
 ![coplenet_structure](./pictures/coplenet_structure.png)
 The structure of COPLE-Net. It employes a concatenation of max-pooling and average pooling to reduce information loss during down-sampling, and uses bridge layers to alleviate the semantic gap between features from the encoder and the decoder. ASPP block is used at the bottleneck to better deal with lesions at multiple scales.
 
+# Dataset
+Based on this project, we have also released a dataset named as `UESTC-COVID-19 Dataset`, which consists of 120 3D CT scans, where 70 volumes were annotated by non-exerts and 50 volumes were annotated by experts. Click [here][data_link] to request for access. 
+
 # Requirements
 * [Pytorch][torch_link] version >=1.0.1.
 * [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Install it by `pip install PYMIC`.
 * Some basic python packages such as Numpy, Pandas, SimpleITK.
 
+[data_link]:http://faculty.uestc.edu.cn/HiLab/en/article/379152/list/index.htm
 [tmi2020]:https://ieeexplore.ieee.org/document/9109297
 [torch_link]:https://pytorch.org
 [pymic_link]:https://github.com/HiLab-git/PyMIC
