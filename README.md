@@ -1,5 +1,5 @@
 # COPLE-Net: COVID-19 Pneumonia Lesion segmentation network
-This repository provides source code and pretrained model of COPLE-Net for COVID-19 pneumonia lesion segmentation network proposed by G. Wang et al.[1]. If you use this code or the pretrained model, please cite the following paper:
+This repository provides source code and pretrained model of COPLE-Net for COVID-19 pneumonia lesion segmentation proposed by G. Wang et al.[1]. If you use this code or the pretrained model, please cite the following paper:
 
 * [1] G. Wang, X. Liu, C. Li, Z. Xu, J. Ruan, H. Zhu, T. Meng, K. Li, N. Huang, S. Zhang. 
 [A Noise-robust Framework for Automatic Segmentation of COVID-19 Pneumonia Lesions from CT Images.][tmi2020] IEEE Transactions on Medical Imaging. 2020. DOI: [10.1109/TMI.2020.3000314][tmi2020]
@@ -11,7 +11,7 @@ A segmentation example. (a) one slice of a CT volume. (b) segmentation by COPLE-
 The structure of COPLE-Net. It employes a concatenation of max-pooling and average pooling to reduce information loss during down-sampling, and uses bridge layers to alleviate the semantic gap between features from the encoder and the decoder. ASPP block is used at the bottleneck to better deal with lesions at multiple scales.
 
 # Dataset
-Based on this project, we have also released a dataset named as `UESTC-COVID-19 Dataset`, which consists of 120 3D CT scans, where 70 volumes were annotated by non-exerts and 50 volumes were annotated by experts. Click [here][data_link] to request for access. 
+Based on this project, we have also released a dataset named as `UESTC-COVID-19 Dataset`, which consists of 120 3D CT scans, where 70 volumes were annotated by non-experts and 50 volumes were annotated by experts. Click [here][data_link] to request for access. 
 
 # Requirements
 * [Pytorch][torch_link] version >=1.0.1.
@@ -26,7 +26,7 @@ Based on this project, we have also released a dataset named as `UESTC-COVID-19 
 # How to use
 1. Download the pretrained model and example CT images from [Google Drive][google_link] or [Baidu Netdisk][baidu_link] (extract code q0ci). Put them into the folder `coplenet_data`.
 2. Run `python net_run.py config/config.cfg`. The results will be saved in `coplenet_data/result`.
-3. To segment COVID-19 pneumonia lesions from your own images, make sure that the images have been cropped into the lung region, and the intensity has been normalized into [0, 1] using window/level of 1500/-650. Open the configure file `config/config.cfg` and edit `root_dir`, `test_csv` and `output_dir` according to the path of your images. Then return to step 2 to obtain the segmentation results.
+3. To segment COVID-19 pneumonia lesions from your own images, make sure that the images have been cropped into the lung region, and the intensity has been normalized into [0, 1] using window width/level of 1500/-650. Open the configure file `config/config.cfg` and edit `root_dir`, `test_csv` and `output_dir` according to the path of your images. Then return to step 2 to obtain the segmentation results.
 
 [google_link]:https://drive.google.com/drive/folders/1K1jbrxWWhG_L7dh6yMyB4DtklBr-bhxH?usp=sharing
 [baidu_link]:https://pan.baidu.com/s/1TSTSkORYNWsX94PxiQUfjw 
