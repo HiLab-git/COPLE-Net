@@ -15,7 +15,7 @@ Based on this project, we have also released a dataset named as `UESTC-COVID-19 
 
 # Requirements
 * [Pytorch][torch_link] version >=1.0.1.
-* [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Install it by `pip install PYMIC`.
+* [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Version 0.2 is required. Install it by `pip install PYMIC==0.2`.
 * Some basic python packages such as Numpy, Pandas, SimpleITK.
 
 [data_link]:http://faculty.uestc.edu.cn/HiLab/en/article/379152/list/index.htm
@@ -31,7 +31,7 @@ COPLE-Net has also been implemented in [MONAI][monai_link], a PyTorch-based, ope
 
 # How to use
 1. Download the pretrained model and example CT images from [Google Drive][google_link] or [Baidu Netdisk][baidu_link] (extract code q0ci). Put them into the folder `coplenet_data`.
-2. Run `python net_run.py config/config.cfg`. The results will be saved in `coplenet_data/result`.
+2. Run `python coplenet_run.py test config/config.cfg`. The results will be saved in `coplenet_data/result`.
 3. To segment COVID-19 pneumonia lesions from your own images, make sure that the images have been cropped into the lung region, and the intensity has been normalized into [0, 1] using window width/level of 1500/-650. Open the configure file `config/config.cfg` and edit `root_dir`, `test_csv` and `output_dir` according to the path of your images. Then return to step 2 to obtain the segmentation results.
 
 [google_link]:https://drive.google.com/drive/folders/1K1jbrxWWhG_L7dh6yMyB4DtklBr-bhxH?usp=sharing

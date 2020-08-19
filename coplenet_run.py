@@ -9,29 +9,29 @@
 from __future__ import print_function, division
 import sys
 import torch
-from coplenet import COPLENet
-from pymic.net_run.net_run import TrainInferAgent
 from pymic.util.parse_config import parse_config
+from pymic.net_run.net_run_agent import  NetRunAgent
+from pymic.net.net_dict import NetDict
+from coplenet import COPLENet
+
+my_net_dict = NetDict
+my_net_dict['COPLENet'] = COPLENet
 
 def main():
-    if(len(sys.argv) < 2):
-        print('Number of arguments should be 2. e.g.')
-        print('    python net_run.py config.cfg')
+    if(len(sys.argv) < 3):
+        print('Number of arguments should be 3. e.g.')
+        print('    python train_infer.py train config.cfg')
         exit()
     cfg_file = str(sys.argv[1])
     config   = parse_config(cfg_file)
 
-    # parameters of COPLENet
-    net_param = {"class_num"   : 2,
-                 "in_chns"     : 1,
-                 "bilinear"    : True,
-                 "feature_chns": [32, 64, 128, 256, 512],
-                 "dropout"     : [0.0, 0.0, 0.3, 0.4, 0.5]}
-    config['network'] = net_param
-    
-    net   = COPLENet(net_param)
-    agent = TrainInferAgent(config, 'test')
-    agent.set_network(net)
+    stage    = str(sys.argv[1])
+    cfg_file = str(sys.argv[2])
+    config   = parse_config(cfg_file)
+
+    # use custormized CNN and loss function
+    agent  = NetRunAgent(config, stage)
+    agent.set_network_dict(my_net_dict)
     agent.run()
 
 if __name__ == "__main__":
