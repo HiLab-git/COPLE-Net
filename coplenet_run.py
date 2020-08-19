@@ -20,7 +20,7 @@ my_net_dict['COPLENet'] = COPLENet
 def main():
     if(len(sys.argv) < 3):
         print('Number of arguments should be 3. e.g.')
-        print('    python train_infer.py train config.cfg')
+        print('    python coplenet_run.py test config.cfg')
         exit()
     cfg_file = str(sys.argv[1])
     config   = parse_config(cfg_file)
