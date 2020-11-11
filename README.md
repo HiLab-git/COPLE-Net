@@ -27,7 +27,7 @@ Based on this project, we have also released a dataset named as `UESTC-COVID-19 
 COPLE-Net has also been implemented in [MONAI][monai_link], a PyTorch-based, open-source framework for deep learning in healthcare imaging. Thanks Dr. Wenqi Li for the re-implementation and you can find it [here][monai_cople].
 
 [monai_link]:https://github.com/Project-MONAI/MONAI
-[monai_cople]:https://github.com/Project-MONAI/MONAI/tree/master/research/coplenet-pneumonia-lesion-segmentation
+[monai_cople]:https://monai.io/research/coplenet-pneumonia-lesion-segmentation
 
 # How to use
 1. Download the pretrained model and example CT images from [Google Drive][google_link] or [Baidu Netdisk][baidu_link] (extract code q0ci). Put them into the folder `coplenet_data`.
