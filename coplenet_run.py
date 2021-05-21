@@ -10,12 +10,12 @@ from __future__ import print_function, division
 import sys
 import torch
 from pymic.util.parse_config import parse_config
-from pymic.net_run.net_run_agent import  NetRunAgent
-from pymic.net.net_dict import NetDict
+from pymic.net_run.agent_seg import  SegmentationAgent
+from pymic.net.net_dict_seg import SegNetDict
 from coplenet import COPLENet
 
-my_net_dict = NetDict
-my_net_dict['COPLENet'] = COPLENet
+net_dict = SegNetDict
+net_dict['COPLENet'] = COPLENet
 
 def main():
     if(len(sys.argv) < 3):
@@ -30,9 +30,14 @@ def main():
     config   = parse_config(cfg_file)
 
     # use custormized CNN and loss function
-    agent  = NetRunAgent(config, stage)
-    agent.set_network_dict(my_net_dict)
-    agent.run()
+    agent  = SegmentationAgent(config, stage)
+    net_name = config['network']['net_type']
+    if(net_name in net_dict):
+        net = net_dict[net_name](config['network'])
+        agent.set_network(net)
+        agent.run()
+    else:
+        raise ValueError("undefined network {0:}".format(net_name))
 
 if __name__ == "__main__":
     main()

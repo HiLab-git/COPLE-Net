@@ -15,7 +15,7 @@ Based on this project, we have also released a dataset named as `UESTC-COVID-19 
 
 # Requirements
 * [Pytorch][torch_link] version >=1.0.1.
-* [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Version 0.2 is required. Install it by `pip install PYMIC==0.2`.
+* [PyMIC][pymic_link], a Pytorch-based toolkit for medical image computing. Version 0.2.3 is required. Install it by `pip install PYMIC==0.2.3`.
 * Some basic python packages such as Numpy, Pandas, SimpleITK.
 
 [data_link]:http://faculty.uestc.edu.cn/HiLab/en/article/379152/list/index.htm
