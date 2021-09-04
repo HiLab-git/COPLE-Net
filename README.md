@@ -40,5 +40,7 @@ COPLE-Net has also been implemented in [MONAI][monai_link], a PyTorch-based, ope
 
 # How to train COPLE-Net
 Training of COPLE-Net was implemented with [PyMIC][pymic_link].
+
 Just follow these [examples][pymic_example] for using PyMIC for network training and testing.
+
 You may need to custormize the configure files to use different network structures, preprocessing methods and loss functions.
