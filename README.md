@@ -22,6 +22,7 @@ Based on this project, we have also released a dataset named as `UESTC-COVID-19 
 [tmi2020]:https://ieeexplore.ieee.org/document/9109297
 [torch_link]:https://pytorch.org
 [pymic_link]:https://github.com/HiLab-git/PyMIC
+[pymic_example]:https://github.com/HiLab-git/PyMIC_examples
 
 # Third-party Implementations
 COPLE-Net has also been implemented in [MONAI][monai_link], a PyTorch-based, open-source framework for deep learning in healthcare imaging. Thanks Dr. Wenqi Li for the re-implementation and you can find it [here][monai_cople].
@@ -37,4 +38,7 @@ COPLE-Net has also been implemented in [MONAI][monai_link], a PyTorch-based, ope
 [google_link]:https://drive.google.com/drive/folders/1K1jbrxWWhG_L7dh6yMyB4DtklBr-bhxH?usp=sharing
 [baidu_link]:https://pan.baidu.com/s/1TSTSkORYNWsX94PxiQUfjw 
 
-
+# How to train COPLE-Net
+Training of COPLE-Net was implemented with [PyMIC][pymic_link].
+Just follow these [examples][pymic_example] for using PyMIC for network training and testing.
+You may need to custormize the configure files to use different network structures, preprocessing methods and loss functions.
