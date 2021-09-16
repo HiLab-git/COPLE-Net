@@ -7,5 +7,5 @@ scipy>=1.3.3
 SimpleITK>=1.2.4
 tensorboard>=2.1.0
 tensorboardX>=1.9
-torchvision>=1.0.1
+torchvision>=0.10.0
 PYMIC==0.2.3
